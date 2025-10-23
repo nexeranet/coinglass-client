@@ -2,27 +2,26 @@ package coinglassclient
 
 import (
 	"context"
-	"encoding/json"
 )
 
 type ETFBitcoinItem struct {
-	Ticker               string      `json:"ticker"`
-	FundName             string      `json:"fund_name"`
-	Region               string      `json:"region"`
-	MarketStatus         string      `json:"market_status"`
-	PrimaryExchange      string      `json:"primary_exchange"`
-	CikCode              string      `json:"cik_code"`
-	FundType             string      `json:"fund_type"`
-	ListDate             int64       `json:"list_date"`
-	SharesOutstanding    string      `json:"shares_outstanding"`
-	AumUsd               string      `json:"aum_usd"`
-	ManagementFeePercent string      `json:"management_fee_percent"`
-	LastTradeTime        int64       `json:"last_trade_time"`
-	LastQuoteTime        int64       `json:"last_quote_time"`
-	VolumeQuantity       json.Number `json:"volume_quantity"`
-	VolumeUsd            float64     `json:"volume_usd"`
-	PriceChangeUsd       float64     `json:"price_change_usd"`
-	PriceChangePercent   float64     `json:"price_change_percent"`
+	Ticker               string  `json:"ticker"`
+	FundName             string  `json:"fund_name"`
+	Region               string  `json:"region"`
+	MarketStatus         string  `json:"market_status"`
+	PrimaryExchange      string  `json:"primary_exchange"`
+	CikCode              string  `json:"cik_code"`
+	FundType             string  `json:"fund_type"`
+	ListDate             int64   `json:"list_date"`
+	SharesOutstanding    string  `json:"shares_outstanding"`
+	AumUsd               string  `json:"aum_usd"`
+	ManagementFeePercent string  `json:"management_fee_percent"`
+	LastTradeTime        int64   `json:"last_trade_time"`
+	LastQuoteTime        int64   `json:"last_quote_time"`
+	VolumeQuantity       string  `json:"volume_quantity"`
+	VolumeUsd            float64 `json:"volume_usd"`
+	PriceChangeUsd       float64 `json:"price_change_usd"`
+	PriceChangePercent   float64 `json:"price_change_percent"`
 	AssetDetails         struct {
 		NetAssetValueUsd       float64 `json:"net_asset_value_usd"`
 		PremiumDiscountPercent float64 `json:"premium_discount_percent"`
@@ -60,7 +59,7 @@ type ETFEthereumItem struct {
 	ManagementFeePercent string  `json:"management_fee_percent"`
 	LastTradeTime        int64   `json:"last_trade_time"`
 	LastQuoteTime        int64   `json:"last_quote_time"`
-	VolumeQuantity       int     `json:"volume_quantity"`
+	VolumeQuantity       string  `json:"volume_quantity"`
 	VolumeUsd            float64 `json:"volume_usd"`
 	Price                float64 `json:"price"`
 	PriceChange          float64 `json:"price_change"`
