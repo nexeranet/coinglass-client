@@ -18,7 +18,7 @@ type ETFBitcoinItem struct {
 	ManagementFeePercent string  `json:"management_fee_percent"`
 	LastTradeTime        int64   `json:"last_trade_time"`
 	LastQuoteTime        int64   `json:"last_quote_time"`
-	VolumeQuantity       string  `json:"volume_quantity"`
+	VolumeQuantity       float64 `json:"volume_quantity"`
 	VolumeUsd            float64 `json:"volume_usd"`
 	PriceChangeUsd       float64 `json:"price_change_usd"`
 	PriceChangePercent   float64 `json:"price_change_percent"`
@@ -59,7 +59,7 @@ type ETFEthereumItem struct {
 	ManagementFeePercent string  `json:"management_fee_percent"`
 	LastTradeTime        int64   `json:"last_trade_time"`
 	LastQuoteTime        int64   `json:"last_quote_time"`
-	VolumeQuantity       string  `json:"volume_quantity"`
+	VolumeQuantity       float64 `json:"volume_quantity"`
 	VolumeUsd            float64 `json:"volume_usd"`
 	Price                float64 `json:"price"`
 	PriceChange          float64 `json:"price_change"`
