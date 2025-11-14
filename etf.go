@@ -27,14 +27,14 @@ type ETFBitcoinItem struct {
 	PriceChangeUsd       *float64 `json:"price_change_usd,omitempty"`
 	PriceChangePercent   *float64 `json:"price_change_percent,omitempty"`
 	AssetDetails         struct {
-		NetAssetValueUsd       float64 `json:"net_asset_value_usd"`
-		PremiumDiscountPercent float64 `json:"premium_discount_percent"`
-		HoldingQuantity        float64 `json:"holding_quantity"`
-		ChangePercent24H       float64 `json:"change_percent_24h"`
-		ChangeQuantity24H      float64 `json:"change_quantity_24h"`
-		ChangePercent7D        float64 `json:"change_percent_7d"`
-		ChangeQuantity7D       float64 `json:"change_quantity_7d"`
-		UpdateDate             string  `json:"update_date"`
+		NetAssetValueUsd       float64  `json:"net_asset_value_usd"`
+		PremiumDiscountPercent float64  `json:"premium_discount_percent"`
+		HoldingQuantity        float64  `json:"holding_quantity"`
+		ChangePercent24H       *float64 `json:"change_percent_24h,omitempty"`
+		ChangeQuantity24H      *float64 `json:"change_quantity_24h,omitempty"`
+		ChangePercent7D        *float64 `json:"change_percent_7d,omitempty"`
+		ChangeQuantity7D       *float64 `json:"change_quantity_7d,omitempty"`
+		UpdateDate             string   `json:"update_date"`
 	} `json:"asset_details"`
 	UpdateTimestamp int64 `json:"update_timestamp"`
 }
@@ -71,16 +71,16 @@ type ETFEthereumItem struct {
 	PriceChangeUsd       *float64 `json:"price_change_usd,omitempty"`
 	PriceChangePercent   *float64 `json:"price_change_percent,omitempty"`
 	AssetDetails         struct {
-		NetAssetValueUsd       *float64 `json:"net_asset_value_usd,omitempty"`
-		PremiumDiscountPercent *float64 `json:"premium_discount_percent,omitempty"`
-		HoldingQuantity        *float64 `json:"holding_quantity,omitempty"`
+		NetAssetValueUsd       float64  `json:"net_asset_value_usd,omitempty"`
+		PremiumDiscountPercent float64  `json:"premium_discount_percent,omitempty"`
+		HoldingQuantity        float64  `json:"holding_quantity,omitempty"`
 		ChangePercent24H       *float64 `json:"change_percent_24h,omitempty"`
 		ChangeQuantity24H      *float64 `json:"change_quantity_24h,omitempty"`
 		ChangePercent7D        *float64 `json:"change_percent_7d,omitempty"`
 		ChangeQuantity7D       *float64 `json:"change_quantity_7d,omitempty"`
 		UpdateDate             string   `json:"update_date,omitempty"`
 	} `json:"asset_details"`
-	UpdateTimestamp *int64 `json:"update_timestamp,omitempty"`
+	UpdateTimestamp int64 `json:"update_timestamp"`
 }
 
 func (c *Client) EthereumETFList(ctx context.Context) (result []ETFEthereumItem, err error) {
