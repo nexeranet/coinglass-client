@@ -164,4 +164,3 @@ func (r *Request) NewHttpRequest(ctx context.Context, secret string) (*http.Requ
 
 	return request, nil
 }
-

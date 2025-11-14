@@ -18,7 +18,10 @@ func TestEthereumETFList(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	t.Log(result)
+
+	for _, item := range result {
+		t.Log(item)
+	}
 
 }
 
@@ -33,6 +36,8 @@ func TestBitcoinETFList(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	t.Log(result)
+	for _, item := range result {
+		t.Log(item.AssetDetails)
+	}
 
 }
